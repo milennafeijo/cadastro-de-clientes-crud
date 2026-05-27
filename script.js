@@ -1,27 +1,57 @@
+// Cadastro de Clientes - CRUD
 
-// Variáveis DOM
+// Variáveis de referência aos elementos do DOM
 
 const cadastrarClienteButton = document.getElementById('cadastrar');
-
 const modal = document.getElementById('modal');
-
 const modalCloseButton = document.getElementById('modal-close');
-
 const modalCancelButton = document.getElementById('modal-cancel');
+const modalSaveButton = document.getElementById('modal-save');
+
+// Array para armazenar os clientes
+
+const clientes = [];
 
 // Funções
 
+// Fecha o modal
 const modalClose = () => {
     modal.classList.add('modal--hidden');
 }
 
+// ***CREATE*** - Adiciona novo cliente ao array e salva no localStorage
+const createClient = (client) => {
+    clientes.push(client);
+    localStorage.setItem('clientes', JSON.stringify(clientes));
+    modalClose();
+}
+
 // Eventos
 
+// Fecha modal ao clicar no X
 modalCloseButton.addEventListener('click', modalClose);
 
+// Fecha modal ao clicar em Cancelar
 modalCancelButton.addEventListener('click', modalClose);
 
+// Abre modal ao clicar em Cadastrar Cliente
 cadastrarClienteButton.addEventListener('click', () => {
     modal.classList.remove('modal--hidden');
-    console.log('clicou');
+});
+
+// Coleta dados do formulário e chama createClient
+modalSaveButton.addEventListener('click', () => {
+    const nomeInput = document.getElementById('nome').value;
+    const emailInput = document.getElementById('email').value;
+    const telefoneInput = document.getElementById('celular').value;
+    const cidadeInput = document.getElementById('cidade').value;
+
+    const newClient = {
+        nome: nomeInput,
+        email: emailInput,
+        telefone: telefoneInput,
+        cidade: cidadeInput
+    };
+
+    createClient(newClient);
 });

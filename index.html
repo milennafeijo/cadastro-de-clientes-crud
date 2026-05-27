@@ -80,24 +80,25 @@
       <form class="modal__form">
         <label>
           <span>Nome</span>
-          <input type="text" placeholder="Nome do cliente" />
+          <input id="nome" type="text" placeholder="Nome do cliente" required />
         </label>
         <label>
-          <span>E-mail</span>
-          <input type="email" placeholder="E-mail do cliente" />
+          <span
+          >E-mail</span>
+          <input id="email" type="email" placeholder="E-mail do cliente" required />
         </label>
         <label>
           <span>Celular</span>
-          <input type="tel" placeholder="Celular do cliente" />
+          <input id="celular" type="tel" placeholder="Celular do cliente" required    />
         </label>
         <label>
           <span>Cidade</span>
-          <input type="text" placeholder="Cidade" />
+          <input id="cidade" type="text" placeholder="Cidade" required />
         </label>
       </form>
 
       <div class="modal__actions">
-        <button class="button button--success">Salvar</button>
+        <button id="modal-save" class="button button--success">Salvar</button>
         <button id="modal-cancel" class="button button--secondary">Cancelar</button>
       </div>
     </div>
