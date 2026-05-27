@@ -7,6 +7,7 @@ const modal = document.getElementById('modal');
 const modalCloseButton = document.getElementById('modal-close');
 const modalCancelButton = document.getElementById('modal-cancel');
 const modalForm = document.getElementById('modal-form');
+const tableBody = document.getElementById('tbody');
 
 // Array para armazenar os clientes
 
@@ -15,32 +16,53 @@ const clientes = [];
 // Funções
 
 // Fecha o modal e reseta o formulário
+
 const modalClose = () => {
     modal.classList.add('modal--hidden');
     modalForm.reset();
 }
 
-// ***CREATE*** - Adiciona novo cliente ao array e salva no localStorage
+// READ - Carrega clientes do localStorage e renderiza na tabela
+
+const loadClients = () => {
+    const storedClients = JSON.parse(localStorage.getItem('clientes'));
+    if (storedClients) {
+        storedClients.forEach(client => {
+            clientes.push(client);
+            renderClients(client);
+        });
+    }
+}
+
+// READ - Renderiza um cliente na tabela
+
+const renderClients = (client) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td>${client.nome}</td>
+        <td>${client.email}</td>
+        <td>${client.telefone}</td>
+        <td>${client.cidade}</td>
+        <td class="actions-cell">
+            <button id="editar" class="button button--success">Editar</button>
+            <button id="excluir" class="button button--danger">Excluir</button>
+        </td>
+    `;
+    tableBody.appendChild(tr);
+}
+
+loadClients();
+
+// CREATE - Adiciona novo cliente ao array e salva no localStorage
+
 const createClient = (client) => {
     clientes.push(client);
     localStorage.setItem('clientes', JSON.stringify(clientes));
     modalClose();
 }
 
-// Eventos
 
-// Fecha modal ao clicar no X
-modalCloseButton.addEventListener('click', modalClose);
-
-// Fecha modal ao clicar em Cancelar
-modalCancelButton.addEventListener('click', modalClose);
-
-// Abre modal ao clicar em Cadastrar Cliente
-cadastrarClienteButton.addEventListener('click', () => {
-    modal.classList.remove('modal--hidden');
-});
-
-// Coleta dados do formulário e chama createClient
+// CREATE - Coleta dados do formulário e chama createClient
 modalForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -58,4 +80,19 @@ modalForm.addEventListener('submit', (e) => {
 
     createClient(newClient);
 
+    renderClients(newClient);
+
 });
+
+
+// Fecha modal ao clicar no X
+modalCloseButton.addEventListener('click', modalClose);
+
+// Fecha modal ao clicar em Cancelar
+modalCancelButton.addEventListener('click', modalClose);
+
+// Abre modal ao clicar em Cadastrar Cliente
+cadastrarClienteButton.addEventListener('click', () => {
+    modal.classList.remove('modal--hidden');
+});
+
