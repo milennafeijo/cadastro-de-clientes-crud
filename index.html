@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="page__header">
+      <div class="page__header-inner">
+        <h1>Cadastro de Clientes</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="panel">
+        <button class="button button--primary button--create">Cadastrar Cliente</button>
+      </div>
+
+      <section class="card">
+        <div class="table-wrapper">
+          <table class="client-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Celular</th>
+                <th>Cidade</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maria Cleyde</td>
+                <td>maria@gmail.com</td>
+                <td>11971657461</td>
+                <td>Anápolis</td>
+                <td class="actions-cell">
+                  <button class="button button--success">Editar</button>
+                  <button class="button button--danger">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Fernando Leonid</td>
+                <td>fernandoleonid@gmail.com</td>
+                <td>119123459876</td>
+                <td>São Roque</td>
+                <td class="actions-cell">
+                  <button class="button button--success">Editar</button>
+                  <button class="button button--danger">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Ana</td>
+                <td>ana@gmail.com</td>
+                <td>1234567891</td>
+                <td>Itapevi</td>
+                <td class="actions-cell">
+                  <button class="button button--success">Editar</button>
+                  <button class="button button--danger">Excluir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal modal--hidden">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2>Atualizando Cliente</h2>
+        <button class="modal__close" aria-label="Fechar">�</button>
+      </div>
+
+      <form class="modal__form">
+        <label>
+          <span>Nome</span>
+          <input type="text" placeholder="Nome do cliente" />
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" placeholder="E-mail do cliente" />
+        </label>
+        <label>
+          <span>Celular</span>
+          <input type="tel" placeholder="Celular do cliente" />
+        </label>
+        <label>
+          <span>Cidade</span>
+          <input type="text" placeholder="Cidade" />
+        </label>
+      </form>
+
+      <div class="modal__actions">
+        <button class="button button--success">Salvar</button>
+        <button class="button button--secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
