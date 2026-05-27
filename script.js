@@ -14,9 +14,10 @@ const clientes = [];
 
 // Funções
 
-// Fecha o modal
+// Fecha o modal e reseta o formulário
 const modalClose = () => {
     modal.classList.add('modal--hidden');
+    modalForm.reset();
 }
 
 // ***CREATE*** - Adiciona novo cliente ao array e salva no localStorage
@@ -56,4 +57,5 @@ modalForm.addEventListener('submit', (e) => {
     };
 
     createClient(newClient);
+
 });
