@@ -77,30 +77,30 @@
         <button id="modal-close" class="modal__close" aria-label="Fechar">X</button>
       </div>
 
-      <form class="modal__form">
+      <form id="modal-form" class="modal__form">
         <label>
           <span>Nome</span>
-          <input id="nome" type="text" placeholder="Nome do cliente" required />
+          <input id="nome" name="nome" type="text" placeholder="Nome do cliente" required />
         </label>
         <label>
           <span
           >E-mail</span>
-          <input id="email" type="email" placeholder="E-mail do cliente" required />
+          <input id="email" name="email" type="email" placeholder="E-mail do cliente" required />
         </label>
         <label>
           <span>Celular</span>
-          <input id="celular" type="tel" placeholder="Celular do cliente" required    />
+          <input id="celular" name="celular" type="tel" placeholder="Celular do cliente" required    />
         </label>
         <label>
           <span>Cidade</span>
-          <input id="cidade" type="text" placeholder="Cidade" required />
-        </label>
-      </form>
+          <input id="cidade" name="cidade" type="text" placeholder="Cidade" required />
+        </label>      
 
       <div class="modal__actions">
-        <button id="modal-save" class="button button--success">Salvar</button>
+        <button type="submit" id="modal-save" class="button button--success">Salvar</button>
         <button id="modal-cancel" class="button button--secondary">Cancelar</button>
       </div>
+    </form>
     </div>
   </div>
 

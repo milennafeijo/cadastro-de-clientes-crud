@@ -6,7 +6,7 @@ const cadastrarClienteButton = document.getElementById('cadastrar');
 const modal = document.getElementById('modal');
 const modalCloseButton = document.getElementById('modal-close');
 const modalCancelButton = document.getElementById('modal-cancel');
-const modalSaveButton = document.getElementById('modal-save');
+const modalForm = document.getElementById('modal-form');
 
 // Array para armazenar os clientes
 
@@ -40,7 +40,9 @@ cadastrarClienteButton.addEventListener('click', () => {
 });
 
 // Coleta dados do formulário e chama createClient
-modalSaveButton.addEventListener('click', () => {
+modalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     const nomeInput = document.getElementById('nome').value;
     const emailInput = document.getElementById('email').value;
     const telefoneInput = document.getElementById('celular').value;
