@@ -110,6 +110,7 @@ button {
   width: 100%;
   border-collapse: collapse;
   min-width: 700px;
+  
 }
 
 .client-table thead {
@@ -131,6 +132,7 @@ button {
 
 .client-table tbody tr {
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  text-align: center;
 }
 
 .client-table tbody tr:nth-child(odd) {
