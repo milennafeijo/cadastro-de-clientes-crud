@@ -16,7 +16,7 @@
 
     <main class="container">
       <div class="panel">
-        <button class="button button--primary button--create">Cadastrar Cliente</button>
+        <button id ="cadastrar" class="button button--primary button--create">Cadastrar Cliente</button>
       </div>
 
       <section class="card">
@@ -69,12 +69,12 @@
     </main>
   </div>
 
-  <div class="modal modal--hidden">
+  <div id ="modal" class="modal modal--hidden">
     <div class="modal__overlay"></div>
     <div class="modal__content">
       <div class="modal__header">
         <h2>Atualizando Cliente</h2>
-        <button class="modal__close" aria-label="Fechar">�</button>
+        <button id="modal-close" class="modal__close" aria-label="Fechar">X</button>
       </div>
 
       <form class="modal__form">
@@ -98,9 +98,12 @@
 
       <div class="modal__actions">
         <button class="button button--success">Salvar</button>
-        <button class="button button--secondary">Cancelar</button>
+        <button id="modal-cancel" class="button button--secondary">Cancelar</button>
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
