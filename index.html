@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Clientes</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="page">
     <header class="page__header">
@@ -16,7 +18,7 @@
 
     <main class="container">
       <div class="panel">
-        <button id ="cadastrar" class="button button--primary button--create">Cadastrar Cliente</button>
+        <button id="cadastrar" class="button button--primary button--create">Cadastrar Cliente</button>
       </div>
 
       <section class="card">
@@ -28,11 +30,11 @@
                 <th>E-mail</th>
                 <th>Celular</th>
                 <th>Cidade</th>
-                <th>Ações</th>                
+                <th>Ações</th>
               </tr>
             </thead>
             <tbody id="tbody">
-              
+
             </tbody>
           </table>
         </div>
@@ -40,42 +42,42 @@
     </main>
   </div>
 
-  <div id ="modal" class="modal modal--hidden">
+  <div id="modal" class="modal modal--hidden">
     <div class="modal__overlay"></div>
     <div class="modal__content">
       <div class="modal__header">
-        <h2>Atualizando Cliente</h2>
+
         <button id="modal-close" class="modal__close" aria-label="Fechar">X</button>
       </div>
 
       <form id="modal-form" class="modal__form">
         <label>
           <span>Nome</span>
-          <input id="nome"  type="text" placeholder="Nome do cliente" required />
+          <input id="nome" type="text" placeholder="Nome do cliente" required />
         </label>
         <label>
-          <span
-          >E-mail</span>
-          <input id="email"  type="email" placeholder="E-mail do cliente" required />
+          <span>E-mail</span>
+          <input id="email" type="email" placeholder="E-mail do cliente" required />
         </label>
         <label>
           <span>Celular</span>
-          <input id="celular"  type="tel" placeholder="Celular do cliente" required    />
+          <input id="celular" type="tel" placeholder="Celular do cliente" required />
         </label>
         <label>
           <span>Cidade</span>
-          <input id="cidade"  type="text" placeholder="Cidade" required />
-        </label>      
+          <input id="cidade" type="text" placeholder="Cidade" required />
+        </label>
 
-      <div class="modal__actions">
-        <button type="submit" id="modal-save" class="button button--success">Salvar</button>
-        <button id="modal-cancel" class="button button--secondary">Cancelar</button>
-      </div>
-    </form>
+        <div class="modal__actions">
+          <button type="submit" id="modal-save" class="button button--success">Salvar</button>
+          <button type="button" id="modal-cancel" class="button button--secondary">Cancelar</button>
+        </div>
+      </form>
     </div>
   </div>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
