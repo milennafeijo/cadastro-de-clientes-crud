@@ -40,5 +40,5 @@ Veja o projeto <a href="https://milennafeijo.github.io/cadastro-de-clientes-crud
 
 
 <div align="center">
-  <img width="700" alt="demo" src="./assets/cadastro-de-clientes-gif.gif" />
+  <img width="100%" alt="demo" src="./assets/cadastro-de-clientes-gif.gif" />
 </div>
