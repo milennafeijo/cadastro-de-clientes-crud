@@ -24,10 +24,23 @@ const modalClose = () => {
     editIndex = null;
 }
 
+
+
 // READ: renderizar a tabela de clientes com o índice de cada cliente para facilitar a edição e exclusão
 
 const renderTable = () => {
     tableBody.innerHTML = '';
+
+        if (clientes.length === 0) {
+            const tr = document.createElement('tr');
+
+        tr.innerHTML = `
+            <td colspan="5" class="no-data">Nenhum cliente cadastrado</td>
+        `;
+
+        tableBody.appendChild(tr);
+        return;
+    }
 
     clientes.forEach((client, index) => {
         renderClients(client, index);
@@ -39,7 +52,7 @@ const renderTable = () => {
 const renderClients = (client, index) => {
     const tr = document.createElement('tr');
 
-    tr.innerHTML = `
+       tr.innerHTML = `
         <td data-label="Nome">${client.nome}</td>
         <td data-label="E-mail">${client.email}</td>
         <td data-label="Celular">${client.telefone}</td>
@@ -79,6 +92,9 @@ const renderClients = (client, index) => {
     });
 
     tableBody.appendChild(tr);
+
+
+    
 }
 
 // READ: carregar os clientes do localStorage ao iniciar a aplicação, garantindo que o índice de cada cliente seja mantido para facilitar a edição e exclusão
@@ -94,8 +110,11 @@ const loadClients = () => {
         });
 
         renderTable();
-    }
+
+    } else {renderTable();}
+    
 }
+
 
 loadClients();
 

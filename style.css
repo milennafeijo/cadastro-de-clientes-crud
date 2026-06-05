@@ -265,6 +265,12 @@ button {
   padding-top: 1rem;
 }
 
+.no-data{
+  text-align: center;
+  color: #475569;
+  font-size: 0.95rem; 
+}
+
 /* Medias queries para responsividade */
 
 @media (max-width: 1024px) {
