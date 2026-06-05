@@ -22,7 +22,7 @@ Veja o projeto <a href="https://milennafeijo.github.io/cadastro-de-clientes-crud
 • JSON.stringify e JSON.parse <br>
 • Lógica de CRUD com array e índices <br>
 • Responsividade com media queries <br>
-• Uso de IAs [Claude, Copilot e ChatGPT) como ferramenta de apoio ao aprendizado <br>
+• Uso de IAs [Claude, Copilot e ChatGPT] como ferramenta de apoio ao aprendizado <br>
 
 ## Desafios
 
@@ -40,5 +40,5 @@ Veja o projeto <a href="https://milennafeijo.github.io/cadastro-de-clientes-crud
 
 
 <div align="center">
-  <img width="100%" alt="demo" src="./assets/cadastro-de-clientes-gif.gif" />
+  <img width="70%" alt="demo" src="./assets/cadastro-de-clientes-gif.gif" />
 </div>
