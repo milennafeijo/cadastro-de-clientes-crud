@@ -24,13 +24,13 @@ Veja o projeto <a href="https://milennafeijo.github.io/cadastro-de-clientes-crud
 • Responsividade com media queries <br>
 • Uso de IAs [Claude, Copilot e ChatGPT] como ferramenta de apoio ao aprendizado <br>
 
-## Desafios
+### Desafios
 
 • Entender o que cada parte do CRUD realmente faz <br>
 • Controlar o índice correto para editar e excluir o cliente certo <br>
 • Responsividade — transformar a tabela em cards no mobile <br>
 
-## Tecnologias
+### Tecnologias
 
 • HTML5 <br>
 • CSS3 <br>
@@ -38,7 +38,19 @@ Veja o projeto <a href="https://milennafeijo.github.io/cadastro-de-clientes-crud
 
 <br>
 
-
 <div align="center">
-  <img width="70%" alt="demo" src="./assets/cadastro-de-clientes-gif.gif" />
+
+  ## 📱 mobile: 
+
+<img width="501" height="489" alt="image" src="https://github.com/user-attachments/assets/38033850-971c-4d7f-bf03-b6cf231e0d52" />
+
+## 🖥️ desktop: 
+
+<img width="923" height="373" alt="image" src="https://github.com/user-attachments/assets/604b3ec8-20b9-4077-94f1-17c1aeb4cf4a" />
+
+  
+
+ 
 </div>
+
+
